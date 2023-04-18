@@ -8,24 +8,27 @@
   --regular-color: #191919;
   --light-color: #202020;
 
-  --yellow-light: #F6DA73;
-  --yellow-regular: #F3C622;
-  --yellow-dark: #D99B32;
+  --yellow-light: #FCCB82;
+  --yellow-regular: #FBAE3C;
+  --yellow-dark: #F09205;
+
+  --text-regular: #F5F5F5;
 }
 
 body {
   font-family: Raleway, sans-serif;
-  background-color: var(--light-color);
+  background-color: var(--regular-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
   user-select: none;
+  overflow-x: hidden;
 }
 
-header {
+.header-container {
   background-color: var(--dark-color);
-  color: var(--yellow-dark);
+  color: var(--yellow-regular);
   padding: 10px;
   text-align: center;
   position: relative;
@@ -43,7 +46,7 @@ header {
   font-size: 66px;
   font-weight: 400;
   display: inline-block;
-  transition: all 0.3s;
+  transition: all 0.25s;
 }
 
 .letter.animate-hover {
@@ -57,10 +60,12 @@ header {
 }
 
 .top-nav {
-  background-color: var(--regular-color);
+  background-color: var(--dark-color);
   color: #F5F5F5;
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
 }
 
 .top-nav ul {
@@ -80,7 +85,7 @@ header {
 }
 
 .top-nav a:hover {
-color: var(--yellow-light);
+  color: var(--yellow-light);
   cursor: pointer;
 }
 
@@ -89,24 +94,49 @@ color: var(--yellow-light);
   border: 0;
 }
 
-#current {
-  color: var(--yellow-dark);
-}
-
-main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--light-color);
-  position: relative;
-}
-
 .wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  flex: 1;
+}
+
+.wave-svg {
+  width: 100%;
+  height: 150px;
+}
+
+.first-content-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.first-title {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-title h1 {
+  margin: 20px;
+  font-size: 4.5em;
+  font-weight: 500;
+  color: var(--text-regular);
+}
+
+.first-title h2 {
+  margin: 20px;
+  font-size: 3.5em;
+  font-weight: 300;
+  color: var(--text-regular);
+}
+
+.second-content-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--yellow-regular);
 }
 
 .encryption-showcase-contanier {
@@ -132,7 +162,7 @@ main {
 .header-text {
   font-weight: 800;
   font-size: 42pt;
-  color: var(--yellow-dark);
+  color: var(--yellow-regular);
   margin-bottom: 0.5rem;
 }
 
