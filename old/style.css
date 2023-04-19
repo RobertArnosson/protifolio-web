@@ -1,0 +1,262 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('./fonts/Raleway.ttf') format('truetype');
+}
+
+:root {
+  --dark-color: #111111;
+  --regular-color: #191919;
+  --light-color: #202020;
+
+  --yellow-light: #FCCB82;
+  --yellow-regular: #FBAE3C;
+  --yellow-dark: #F09205;
+
+  --text-regular: #F5F5F5;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  background-color: var(--regular-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.header-container {
+  color: var(--yellow-regular);
+  padding-top: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-div {
+  user-select: none;
+  font-size: 0;
+}
+
+.letter {
+  padding: 0;
+  margin: 20px 0;
+  font-family: Raleway;
+  font-size: 100pt;
+  font-weight: 400;
+  display: inline-block;
+  transition: all 0.35s cubic-bezier(.25,.40,.60,1);
+}
+
+.letter.animate-hover {
+  color: #F5F5F5;
+  transform: translateY(-30px);
+}
+
+.letter.animate-small-hover {
+  color: var(--yellow-light);
+  transform: translateY(-15px);
+}
+
+.top-nav {
+  background-color: var(--dark-color);
+  color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  height: 70px;
+}
+
+.top-nav ul {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  align-items: end;
+}
+
+.top-nav a {
+  color: #F5F5F5;
+  display: block;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.top-nav a:hover {
+  color: var(--yellow-regular);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.top-nav:focus {
+  outline: none;
+  border: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.encryption-showcase-contanier {
+  width: max-content;
+}
+
+.ease-of-use-showcase-contanier {
+  width: max-content;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  position: absolute;
+  top: 0;
+}
+
+.header-text {
+  font-weight: 800;
+  font-size: 42pt;
+  color: var(--yellow-regular);
+  margin-bottom: 0.5rem;
+}
+
+.header-description {
+  color: var(--yellow-light);
+}
+
+.text-showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-showcase {
+  background-color: #191919;
+  border-radius: 1rem;
+  filter: drop-shadow(0 0 0.5rem #525252);
+  padding: 1.25rem 2rem;
+  padding-top: 2.15rem;
+  margin: 1.5rem;
+  position: relative;
+  width: max-content;
+  max-width: 500px;
+}
+
+.text-showcase-title {
+  position: absolute;
+  color: #F5F5F5;
+  top: 0.75rem;
+  left: 1rem;
+  font-size: 9pt;
+  font-weight: 300;
+}
+
+.text-for-showcase {
+  color: var(--yellow-dark);
+  font-size: 12pt;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.text-showcase-line {
+  width: 5px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--yellow-dark);
+  filter: drop-shadow(0 0 0.5rem var(--yellow-light));
+}
+
+.center-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: var(--yellow-regular);
+}
+
+.center-button ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.center-button li {
+  font-size: 34px;
+  width: 8em;
+  height: 2em;
+  border-left: 0.08em solid;
+  position: relative;
+  margin-top: 1.2em;
+  cursor: pointer;
+}
+
+.center-button li::before,
+.center-button li::after
+{
+  content: '';
+  position: absolute;
+  width: inherit;
+  border-left: inherit;
+  z-index: 1;
+}
+
+.center-button li::before {
+  height: 80%;
+  top: 10%;
+  left: calc(-0.15em - 0.08em * 2);
+  filter: brightness(80%);
+}
+
+.center-button li::after {
+  height: 60%;
+  top: 20%;
+  left: calc(-0.15em * 2 - 0.08em * 3);
+  filter: brightness(60%);
+}
+
+.center-button li span {
+  position: relative;
+  height: 120%;
+  top: -10%;
+  box-sizing: border-box;
+  border: 0.08em solid;
+  background-color: var(--regular-color);
+  color: var(--yellow-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.center-button li:hover span {
+  transform: translateX(0.15em);
+}
+
+.center-button a {
+  color: var(--yellow-regular);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: #F5F5F5;
+  padding: 10px;
+  text-align: center;
+}
