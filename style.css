@@ -86,7 +86,6 @@ header {
   position: sticky;
   top: 0;
   height: 70px;
-  padding-bottom: 15rem;
 }
 
 .top-nav ul {
@@ -118,13 +117,10 @@ header {
 
 .site-title {
   font-size: 3rem;
+  font-size: clamp(1rem, 4vw, 3rem);
   text-align: center;
-  padding-top: 10rem;
   padding-bottom: 1.5rem;
   margin: 0;
-  background-image: var(--gradient);
-  background-clip: text;
-  color: transparent;
 }
 
 .section-title {
@@ -135,20 +131,21 @@ header {
 .site-title p {
   margin: 0;
   font-weight: 200;
-  color: var(--gradient);
+  color: var(--second-light);
 }
 
 .arrow-down {
   width: 100px;
   height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .arrow-down svg {
-  --start-color: var(--second-regular);
-  --end-color: var(--comp-regular);
-}
-
-.arrow-down {
+  --start-color: var(--second-light);
+  --end-color: var(--second-regular);
   transform: rotate(90deg);
 }
 
