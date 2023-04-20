@@ -27,6 +27,9 @@
     var(--second-regular),
     var(--comp-regular)
   );
+
+  --diagonal-x: 50%;
+  --diagonal-y: 50%;
 }
 
 html {
@@ -111,7 +114,7 @@ header {
 }
 
 .top-nav a:hover {
-  color: var(--second-regular);
+  color: var(--second-light);
   transform: translateY(-3px);
   cursor: pointer;
 }
@@ -151,11 +154,12 @@ header {
   bottom: 10pt;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .arrow-down svg {
-  --start-color: var(--second-light);
-  --end-color: var(--second-light);
+  --start-color: var(--second-dark);
+  --end-color: var(--second-regular);
   transform: rotate(90deg);
 }
 
@@ -181,6 +185,9 @@ section {
 .diagonal::after {
   content: "";
   background: var(--gradient);
+  background-size: 200%;
+  background-position-x: var(--diagonal-x);
+  background-position-y: var(--diagonal-y);
   position: absolute;
   z-index: -1;
   inset: 0;
