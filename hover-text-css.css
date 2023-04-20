@@ -9,7 +9,7 @@
   margin: 20px 0;
   font-family: Raleway;
   font-size: 10rem;
-  font-size: clamp(4rem, 10vw, 10rem);
+  font-size: clamp(2.75rem, 8vw, 10rem);
   font-weight: 400;
   display: inline-block;
   transition: all 0.4s cubic-bezier(0.25, 0.4, 0.6, 1);
