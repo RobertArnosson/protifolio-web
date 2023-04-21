@@ -1,74 +1,122 @@
 @font-face {
-    font-family: "Raleway";
-    src: url("./fonts/Raleway.ttf") format("truetype");
+  font-family: "Raleway";
+  src: url("../../fonts/Raleway.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #18171d;
+  --regular-color: #1c1b22;
+  --light-color: #3a3846;
+
+  --second-light: #f88188;
+  --second-regular: #f64f59;
+  --second-dark: #af383f;
+
+  --comp-regular: #ffae65;
+
+  --text-regular: #f5f5f5;
+
+  --gradient: linear-gradient(
+    45deg,
+    var(--second-regular),
+    var(--comp-regular)
+  );
+
+  --diagonal-x: 50%;
+  --diagonal-y: 50%;
+}
+
+html {
+  background: var(--regular-color);
+}
+
+body {
+  font-family: Raleway;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.top-border {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  filter: drop-shadow(1.25rem 0 5px var(--dark-color));
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(
+    45deg,
+    var(--second-dark),
+    var(--second-regular),
+    var(--second-light)
+  );
+  background-size: 400% 400%;
+  animation: top-bar-animation 10s ease infinite;
+}
+
+@keyframes top-bar-animation {
+  0% {
+    background-position: 100% 0%;
   }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+  50% {
+    background-position: 0% 100%;
   }
-  
-  :root {
-    --dark-color: #18171d;
-    --regular-color: #1c1b22;
-    --light-color: #3a3846;
-  
-    --second-light: #f88188;
-    --second-regular: #f64f59;
-    --second-dark: #af383f;
-  
-    --comp-regular: #ffae65;
-  
-    --text-regular: #f5f5f5;
-  
-    --gradient: linear-gradient(
-      45deg,
-      var(--second-regular),
-      var(--comp-regular)
-    );
-  
-    --diagonal-x: 50%;
-    --diagonal-y: 50%;
+  100% {
+    background-position: 100% 0%;
   }
-  
-  html {
-    background: var(--regular-color);
-  }
-  
-  body {
-    font-family: Raleway;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  .top-border {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    filter: drop-shadow(1.25rem 0 5px var(--dark-color));
-    width: 100%;
-    height: 0.25rem;
-    background: linear-gradient(
-      45deg,
-      var(--second-dark),
-      var(--second-regular),
-      var(--second-light)
-    );
-    background-size: 400% 400%;
-    animation: top-bar-animation 10s ease infinite;
-  }
-  
-  @keyframes top-bar-animation {
-    0% {
-      background-position: 100% 0%;
-    }
-    50% {
-      background-position: 0% 100%;
-    }
-    100% {
-      background-position: 100% 0%;
-    }
-  }
-  
+}
+
+.top-stick {
+  position: sticky;
+  top: 0;
+}
+
+.wrapper {
+  max-width: 50rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background-color: var(--dark-color);
+}
+
+.top-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.top-nav a {
+  color: #f5f5f5;
+  display: block;
+  padding: 10px 15px;
+  font-size: 1.25rem;
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.top-nav a:hover {
+  color: var(--second-light);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.top-nav:focus {
+  outline: none;
+  border: 0;
+}

@@ -169,20 +169,29 @@ header {
   transform: rotate(90deg);
 }
 
-.center-text {
-  text-align: center;
-}
-
 .center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.f-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .spacer {
   width: 100%;
   margin-block: 15rem;
+}
+
+.spacer-v {
+  margin-inline: 1.5rem;
 }
 
 .spacer-s {
@@ -262,7 +271,7 @@ section {
   height: 10rem;
   width: 32rem;
   height: clamp(1rem, 10vh, 8rem);
-  width: clamp(4rem, 16rem, 24vh);
+  width: clamp(4rem, 16rem, 28vh);
   font-size: clamp(0.5rem, 3vw, 1.5rem);
   font-weight: 400;
   text-align: center;
