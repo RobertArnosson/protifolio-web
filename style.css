@@ -28,6 +28,12 @@
     var(--comp-regular)
   );
 
+  --gradient-r: linear-gradient(
+    45deg,
+    var(--comp-regular),
+    var(--second-regular)
+  );
+
   --diagonal-x: 50%;
   --diagonal-y: 50%;
 }
@@ -41,6 +47,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0;
+  color: var(--text-regular);
 }
 
 .top-border {
@@ -73,8 +80,7 @@ body {
 }
 
 header {
-  height: 100vh;
-  margin-bottom: 5rem;
+  height: 115vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,9 +169,25 @@ header {
   transform: rotate(90deg);
 }
 
+.center-text {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .spacer {
   width: 100%;
-  margin-block: 10rem;
+  margin-block: 15rem;
+}
+
+.spacer-s {
+  width: 100%;
+  margin-block: 7.5rem;
 }
 
 section {
@@ -173,16 +195,17 @@ section {
   margin-bottom: 5rem;
 }
 
-.diagonal {
+.diagonal-rl {
   --skew-angle: -5deg;
 
   position: relative;
   isolation: isolate;
   font-size: 1.5rem;
   font-size: clamp(0.75rem, 3vw, 1.5rem);
+  color: var(--regular-color);
 }
 
-.diagonal::after {
+.diagonal-rl::after {
   content: "";
   background: var(--gradient);
   background-size: 200%;
@@ -203,4 +226,62 @@ section {
   color: var(--text-regular);
   font-size: 1.5rem;
   font-size: clamp(0.75rem, 3vw, 1.5rem);
+}
+
+.diagonal-lr {
+  --skew-angle: 5deg;
+
+  position: relative;
+  isolation: isolate;
+  font-size: 1.5rem;
+  font-size: clamp(0.75rem, 3vw, 1.5rem);
+  color: var(--regular-color);
+}
+
+.diagonal-lr::after {
+  content: "";
+  background: var(--gradient-r);
+  background-size: 200%;
+  background-position-x: var(--diagonal-x);
+  background-position-y: var(--diagonal-y);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle)) translateY(30px);
+  filter: drop-shadow(0 1rem 10px var(--dark-color));
+}
+
+.download-click {
+  text-decoration: none;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 32rem;
+  height: clamp(1rem, 10vh, 8rem);
+  width: clamp(4rem, 16rem, 24vh);
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-regular);
+  border: 0.25rem solid transparent;
+  border-radius: 0;
+  background-image: var(--gradient), var(--gradient);
+  background-origin: border-box;
+  background-clip: content-box, border-box, text;
+  -webkit-background-clip: content-box, border-box, text;
+  box-shadow: 2px 1000px 1px var(--regular-color) inset;
+  transition: all 250ms ease;
+}
+
+.download:hover {
+  box-shadow: none;
+  cursor: pointer;
+  font-size: clamp(0.75rem, 4vw, 1.75rem);
+  font-weight: 500;
+  border-radius: 1rem;
 }
