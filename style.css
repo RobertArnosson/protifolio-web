@@ -74,7 +74,7 @@ body {
 
 header {
   height: 100vh;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +158,7 @@ header {
 }
 
 .arrow-down svg {
-  --start-color: var(--second-dark);
+  --start-color: var(--regular-color);
   --end-color: var(--second-regular);
   transform: rotate(90deg);
 }
