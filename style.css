@@ -275,6 +275,7 @@ section {
   background-clip: content-box, border-box, text;
   -webkit-background-clip: content-box, border-box, text;
   box-shadow: 2px 1000px 1px var(--regular-color) inset;
+  filter: drop-shadow(0 1rem 10px var(--dark-color));
   transition: all 250ms ease;
 }
 
