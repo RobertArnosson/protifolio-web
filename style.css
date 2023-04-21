@@ -282,7 +282,4 @@ section {
 .download:hover {
   box-shadow: none;
   cursor: pointer;
-  font-size: clamp(0.75rem, 4vw, 1.75rem);
-  font-weight: 500;
-  border-radius: 1rem;
 }
