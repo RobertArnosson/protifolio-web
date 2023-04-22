@@ -1,35 +1,12 @@
 @font-face {
   font-family: "Raleway";
-  src: url("../../fonts/Raleway.ttf") format("truetype");
+  src: var(--font-url) format("truetype");
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-:root {
-  --dark-color: #18171d;
-  --regular-color: #1c1b22;
-  --light-color: #3a3846;
-
-  --second-light: #f88188;
-  --second-regular: #f64f59;
-  --second-dark: #af383f;
-
-  --comp-regular: #ffae65;
-
-  --text-regular: #f5f5f5;
-
-  --gradient: linear-gradient(
-    45deg,
-    var(--second-regular),
-    var(--comp-regular)
-  );
-
-  --diagonal-x: 50%;
-  --diagonal-y: 50%;
 }
 
 html {
