@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-family: Raleway;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -161,16 +161,21 @@ header {
 
 .spacer {
   width: 100%;
-  margin-block: 10rem;
+  padding-block: 10rem;
+}
+
+.spacer-ss {
+  width: 100%;
+  padding-block: 3rem;
 }
 
 .spacer-v {
-  margin-inline: clamp(0.5rem, 2vw, 1.5rem);
+  padding-inline: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 .spacer-s {
   width: 100%;
-  margin-block: 7.5rem;
+  padding-block: 7.5rem;
 }
 
 section {
@@ -234,38 +239,18 @@ section {
   filter: drop-shadow(0 1rem 10px var(--dark-color));
 }
 
-.encrypted-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 3rem;
+.encryption-container {
+  text-align: center;
 }
 
-.unencrypted {
+.encryption-p, .decryption-p {
   background-color: var(--dark-color);
-  padding: 1rem;
-  padding-inline: 2rem;
-  border-radius: 1.5rem;
-  
+  border-radius: 10px;
+  word-wrap: break-word;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  margin-bottom: 4rem;
 }
-
-.encrypted {
-  background-color: var(--dark-color);
-  padding: 1rem;
-  padding-inline: 2rem;
-  border-radius: 1.5rem;
-  
-}
-
-.unencrypted p,
-.encrypted p {
-  margin: 0;
-  padding-block: 0.5rem;
-  color: var(--text-regular);
-  max-width: 25rem;
-  overflow-x: auto;
-}
-
 
 .download-click {
   text-decoration: none;
