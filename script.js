@@ -11,9 +11,9 @@ document.getElementById("arrow-down-id").addEventListener("click", () => {
 
 document.getElementById("download-ty").addEventListener("click", () => {
   window.location.href =
-    "https://github.com/RobertArnosson/keykeeperweb/archive/refs/heads/main.zip";
+    "https://github.com/RobertArnosson/keykeeperapp/archive/refs/heads/master.zip";
 
   setTimeout(() => {
     window.location.href = "./pages/thankyou/thankyou.html";
-  }, 400);
+  }, 1000);
 });

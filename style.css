@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  font-family: 'Arial';
   font-family: Raleway;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -160,7 +161,7 @@ header {
 
 .spacer {
   width: 100%;
-  margin-block: 15rem;
+  margin-block: 10rem;
 }
 
 .spacer-v {
@@ -232,6 +233,39 @@ section {
   transform: skewY(var(--skew-angle)) translateY(30px);
   filter: drop-shadow(0 1rem 10px var(--dark-color));
 }
+
+.encrypted-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.unencrypted {
+  background-color: var(--dark-color);
+  padding: 1rem;
+  padding-inline: 2rem;
+  border-radius: 1.5rem;
+  
+}
+
+.encrypted {
+  background-color: var(--dark-color);
+  padding: 1rem;
+  padding-inline: 2rem;
+  border-radius: 1.5rem;
+  
+}
+
+.unencrypted p,
+.encrypted p {
+  margin: 0;
+  padding-block: 0.5rem;
+  color: var(--text-regular);
+  max-width: 25rem;
+  overflow-x: auto;
+}
+
 
 .download-click {
   text-decoration: none;
