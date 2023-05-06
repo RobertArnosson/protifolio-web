@@ -17,6 +17,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .top-border {
@@ -94,4 +95,19 @@ body {
 .top-nav:focus {
   outline: none;
   border: 0;
+}
+
+.devider {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: clamp(15rem, 35vw, 35vw);
+  background-color: var(--second-regular);
+}
+
+.site-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 6rem);
+  color: var(--second-regular);
 }
