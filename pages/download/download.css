@@ -110,4 +110,6 @@ body {
   text-align: center;
   font-size: clamp(1.5rem, 2.5vw, 6rem);
   color: var(--second-regular);
+  font-weight: 400;
+  margin-block: 1rem;
 }

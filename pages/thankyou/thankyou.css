@@ -169,12 +169,15 @@ body {
 
 .wrapper-text h1 {
   font-size: clamp(2rem, 15vw, 10rem);
+  font-weight: 400;
   color: var(--second-regular);
 }
 
 .wrapper-text p {
   font-size: clamp(1rem, 4vw, 2.5rem);
+  font-weight: 200;
   color: var(--second-light);
+  margin: 0;
 }
 
 .wrapper-text h1,

@@ -15,5 +15,5 @@ document.getElementById("download-ty").addEventListener("click", () => {
 
   setTimeout(() => {
     window.location.href = "./pages/thankyou/thankyou.html";
-  }, 1000);
+  }, 1500);
 });

@@ -39,6 +39,27 @@ body {
   animation: top-bar-animation 10s ease infinite;
 }
 
+.top-warning {
+  display: flex;
+  padding: 1rem;
+  background-color: red;
+}
+
+.top-warning-icon {
+  margin-inline: 6rem 7rem;
+}
+
+.top-warning-icon span {
+  font-size: 8rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-warning-icon {
+    display: none;
+  }
+}
+
 @keyframes top-bar-animation {
   0% {
     background-position: 100% 0%;
@@ -283,4 +304,27 @@ section {
 .download:hover {
   box-shadow: none;
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  background-color: var(--dark-color);
+}
+
+.licence {
+  text-align: center;
+  font-size: clamp(0.75rem, 1vw, 1.25rem);
+}
+
+.licence a {
+  text-decoration: none;
+  color: var(--second-regular);
+}
+
+.licence a:hover {
+  color: var(--second-dark);
 }
