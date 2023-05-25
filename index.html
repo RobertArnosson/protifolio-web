@@ -11,13 +11,16 @@
   </head>
   <body>
     <div class="top-border"></div>
-    <div class="top-warning">
+    <div class="top-warning" id="top-warning-id">
       <div class="top-warning-icon">
         <span>!</span>
       </div>
       <div class="top-warning-text">
         <h2>SOFTWARE NOT FINISHED</h2>
         <p>This website and software downloadable from this website is not finished work and might not work as expected.</p>
+      </div>
+      <div class="top-warning-close">
+        <span id="top-warning-close-id">✕</span>
       </div>
     </div>
     <header>
@@ -92,11 +95,15 @@
         <div class="encryption-container">
           <div class="encryption">
             <h3>Original Password</h3>
-            <p class="encryption-p">my1_$Up3r_sEcuR3_pas$W0Rd</p>
+            <p class="encryption-p">secure_password</p>
           </div>
+          <span class="encryption-arrow">🡓</span>
           <div class="decryption">
-            <h3>Encrypted Password</h3>
-            <p class="decryption-p">6Yd0dAnBDFuKiS0Y3LCQZfbFmnLWmm00GtB_1RYgTh9xnYQ9z-vWUPEQVrX4WdVJgmnwGQvGWmoDgq9AzBscZuru8NhDJ0dhryeDlvMzMM9CcL7Oa51D244CXSqcOJl2q31P2gobi6LpItMVlXYgZMRxZxQA7cgbr1M485xgAiL2HPRlBAy0xCE=</p>
+            <h3>Hashed And Encrypted Password</h3>
+            <p class="decryption-p" id="decryption-p-id">Mndw8psoIXBh8M1iM9HxtHHqpMNIUSvcwW8CJYl57kZ6z-KVlAn3p6RVoaeFgPrJhHlHfWz0iftUcgilPRBsQ5lSWNx8Lkp9lMuX64mDo2DxjhnQ6fVL9YfeT-f_RGunyftGf6oUBhyhCE8fEElp2EEYwDlUOICD4icvs2JH0pke4I95IYzH2zv-QgWNjGwVjXe4ASSOTfoY33dhuFy2uZV3f5_ZZdp03b0d9Lr6AUy06PqRhbaKRQ3kdnuMoukGsxQ5x_UnUeXjBqfPPpkxofS4Y9kv9suUHwMUQHja_nZ-38ZH6_bDN8OwWdlffrOoPHiPeyon92P_S-mDYy--el6ePU1Jr30CcQ1iHyf53F4GiPj2jILoXAXAlo5G34WZpsedq-F6</p>
+          </div>
+          <div class="encryption-refresh" id="encryption-refresh-id">
+            <span>Refresh</span>
           </div>
         </div>
       </div>
@@ -120,9 +127,8 @@
         <h2 class="section-title">Easy To Download</h2>
         <p>
           Simplify password management with Key Keeper. The user-friendly
-          interface is easy to set up, just unzip and double-click the file
-          called <b>"keykeeper.exe"</b>. Securely store all your passwords with
-          ease and eliminate the frustration of managing multiple passwords. Key
+          interface is easy to use and super responsive. Securely store all your passwords with
+          ease and <b>eliminate the frustration</b> of managing multiple passwords. Key
           Keeper is designed to make password management effortless for all
           users.
         </p>
@@ -131,7 +137,7 @@
     <div class="spacer-ss"></div>
     <section class="basic">
       <div class="wrapper center">
-        <h2 class="section-title center">Choose How To Download</h2>
+        <h2 class="section-title center">Download Below</h2>
         <div class="f-row">
           <a class="download-click download" id="download-ty"
             ><div>Download Now</div></a

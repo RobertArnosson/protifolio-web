@@ -54,6 +54,20 @@ body {
   font-weight: 600;
 }
 
+.top-warning-close {
+  position: relative;
+  flex-grow: 1;
+}
+
+.top-warning-close span {
+  position: absolute;
+  right: 0;
+  padding-right: 3.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   .top-warning-icon {
     display: none;
@@ -264,13 +278,43 @@ section {
   text-align: center;
 }
 
+.encryption-arrow {
+  font-size: 3rem;
+}
+
 .encryption-p, .decryption-p {
   background-color: var(--dark-color);
   border-radius: 10px;
-  word-wrap: break-word;
+  word-wrap: break-all;
+  line-break: anywhere;
   padding: 1.2rem;
   margin: 1rem 0;
-  margin-bottom: 4rem;
+}
+
+.encryption-refresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 1rem;
+  height: 3.5rem;
+  background-color: var(--dark-color);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.encryption-refresh:hover {
+  background-color: var(--light-color);
+}
+
+.encryption-refresh:active span {
+  color: var(--text-regular);
+}
+
+.encryption-refresh span {
+  user-select: none;
+  color: var(--second-regular);
+  transition: all 0.1s ease-in-out;
 }
 
 .download-click {
