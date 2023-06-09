@@ -39,35 +39,6 @@ body {
   animation: top-bar-animation 10s ease infinite;
 }
 
-.top-warning {
-  display: flex;
-  padding: 1rem;
-  background-color: red;
-}
-
-.top-warning-icon {
-  margin-inline: 6rem 7rem;
-}
-
-.top-warning-icon span {
-  font-size: 8rem;
-  font-weight: 600;
-}
-
-.top-warning-close {
-  position: relative;
-  flex-grow: 1;
-}
-
-.top-warning-close span {
-  position: absolute;
-  right: 0;
-  padding-right: 3.5rem;
-  font-size: 2rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 768px) {
   .top-warning-icon {
     display: none;

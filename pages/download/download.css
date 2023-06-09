@@ -106,10 +106,51 @@ body {
   background-color: var(--second-regular);
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.img-border {
+  border:  solid 2px var(--second-regular);
+}
+
 .site-title {
   text-align: center;
   font-size: clamp(1.5rem, 2.5vw, 6rem);
   color: var(--second-regular);
   font-weight: 400;
   margin-block: 1rem;
+}
+
+.basic-section {
+  padding-block: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-title-num {
+  text-align: left;
+  font-size: clamp(1.25rem, 2.5vw, 4rem);
+  color: var(--second-regular);
+  font-weight: 500;
+  margin-block: 1rem;
+}
+
+.section-title {
+  text-align: left;
+  font-size: clamp(1rem, 2vw, 3.5rem);
+  color: var(--second-regular);
+  font-weight: 500;
+  margin-block: 1rem;
+}
+
+.download-text {
+  text-decoration: underline;
+  color: var(--comp-regular);
+}
+
+.download-text:hover {
+  cursor: pointer;
 }

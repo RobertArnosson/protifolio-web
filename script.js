@@ -27,15 +27,11 @@ document.getElementById("arrow-down-id").addEventListener("click", () => {
 
 document.getElementById("download-ty").addEventListener("click", () => {
   window.location.href =
-    "https://github.com/RobertArnosson/keykeeperapp/archive/refs/heads/master.zip";
+    "https://github.com/RobertArnosson/keykeeper_exe/archive/refs/heads/main.zip";
 
   setTimeout(() => {
     window.location.href = "./pages/thankyou/thankyou.html";
-  }, 1500);
-});
-
-document.getElementById("top-warning-close-id").addEventListener("click", () => {
-  document.getElementById("top-warning-id").style.display = "None"
+  }, 4000);
 });
 
 document.getElementById("encryption-refresh-id").addEventListener("click", () => {
