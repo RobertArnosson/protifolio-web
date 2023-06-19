@@ -314,26 +314,3 @@ section {
   box-shadow: none;
   cursor: pointer;
 }
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 15rem;
-  background-color: var(--dark-color);
-}
-
-.licence {
-  text-align: center;
-  font-size: clamp(0.75rem, 1vw, 1.25rem);
-}
-
-.licence a {
-  text-decoration: none;
-  color: var(--second-regular);
-}
-
-.licence a:hover {
-  color: var(--second-dark);
-}
