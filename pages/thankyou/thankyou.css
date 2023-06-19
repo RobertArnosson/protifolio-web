@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Raleway";
-  src: var(--font-url) format("truetype");
-}
-
 *,
 *::before,
 *::after {
@@ -16,7 +11,7 @@ html {
 }
 
 body {
-  font-family: Raleway;
+  font-family: "Raleway";
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0;
